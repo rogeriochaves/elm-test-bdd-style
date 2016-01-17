@@ -1,5 +1,8 @@
-elm-test-bdd-style
+elm-test-bdd-style [![Build Status][snap-svg]][snap-url]
 ==================
+
+[snap-svg]: https://snap-ci.com/rogeriochaves/elm-test-bdd-style/branch/master/build_image.svg
+[snap-url]: https://snap-ci.com/rogeriochaves/elm-test-bdd-style/branch/master
 
 BDD style matchers on top of elm-test
 
