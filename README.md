@@ -88,4 +88,4 @@ tests =
 
 And you will get a hundred runs:
 
-![quick-check](https://cloud.githubusercontent.com/assets/792201/12377780/858e5fbe-bd10-11e5-8148-117b4bafa902.png)
+![quick-check](https://cloud.githubusercontent.com/assets/792201/12377802/316d9b88-bd11-11e5-836f-b3b02ba99112.png)
