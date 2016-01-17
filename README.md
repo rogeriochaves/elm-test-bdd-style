@@ -85,3 +85,7 @@ tests =
           (list int)
     ]
 ```
+
+And you will get a hundred runs:
+
+![quick-check](https://cloud.githubusercontent.com/assets/792201/12377780/858e5fbe-bd10-11e5-8148-117b4bafa902.png)
