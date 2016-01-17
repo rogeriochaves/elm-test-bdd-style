@@ -63,7 +63,7 @@ tests =
 
 ## Property Based Testing ##
 
-You can also lean on the power of elm-check in an idiomatic-consise way.
+You can also lean on the power of elm-check in an idiom-concise way.
 
 First, check-out [elm-check](https://github.com/NoRedInk/elm-check) page for installing it on your project, you will need the Investigators.
 
