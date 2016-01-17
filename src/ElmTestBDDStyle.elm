@@ -1,7 +1,7 @@
 module ElmTestBDDStyle
   (Test, describe, it
   , expect, toBe, notToBe
-  , itAlways, expectEach, toBeTheSameAs, forEvery) where
+  , itAlways, expectThat, isTheSameAs, forEvery) where
 
 {-| BDD style functions for ElmTest
 
@@ -12,7 +12,7 @@ module ElmTestBDDStyle
 @docs expect, toBe, notToBe
 
 # Property-based testing
-@docs itAlways, expectEach, toBeTheSameAs, forEvery
+@docs itAlways, expectThat, isTheSameAs, forEvery
 
 -}
 
@@ -49,8 +49,8 @@ notToBe = (<<) not << toBe
 type Conjunction = Word
 
 {-| Idiomatic word helper -}
-toBeTheSameAs : Conjunction
-toBeTheSameAs = Word
+isTheSameAs : Conjunction
+isTheSameAs = Word
 
 {-| Idiomatic word helper -}
 forEvery : Conjunction
@@ -62,6 +62,6 @@ itAlways description expectation =
   expectation description
 
 {-| Generates a hundred tests with random input beginning with the initial seed 1 -}
-expectEach : (a -> b) -> Conjunction -> (a -> b) -> Conjunction -> Investigator a -> String -> Test
-expectEach function _ checker _ investigator description =
+expectThat : (a -> b) -> Conjunction -> (a -> b) -> Conjunction -> Investigator a -> String -> Test
+expectThat function _ checker _ investigator description =
   CheckTest.test description function checker investigator 100 (initialSeed 1)

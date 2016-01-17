@@ -25,9 +25,9 @@ tests =
         expect 10 toBeGreaterThan 5
 
     , itAlways "ends up with the same list when reversing twice" <|
-        expectEach
+        expectThat
           (\list -> List.reverse (List.reverse list))
-        toBeTheSameAs
+        isTheSameAs
           (identity)
         forEvery
           (list int)

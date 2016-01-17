@@ -77,9 +77,9 @@ tests : Test
 tests =
   describe "Property Based Testing"
     [ itAlways "ends up with the same list when reversing twice" <|
-        expectEach
+        expectThat
           (\list -> List.reverse (List.reverse list))
-        toBeTheSameAs
+        isTheSameAs
           (identity)
         forEvery
           (list int)
