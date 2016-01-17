@@ -89,3 +89,5 @@ tests =
 And you will get a hundred runs:
 
 ![quick-check](https://cloud.githubusercontent.com/assets/792201/12377802/316d9b88-bd11-11e5-836f-b3b02ba99112.png)
+
+You can easily mix those tests with the regular ones inside your `describe`.
