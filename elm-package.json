@@ -1,0 +1,19 @@
+{
+    "version": "1.0.0",
+    "summary": "BDD-style matchers for elm-test",
+    "repository": "https://github.com/rogeriochaves/elm-test-bdd-style.git",
+    "license": "MIT",
+    "source-directories": [
+        "src",
+        "test"
+    ],
+    "exposed-modules": [
+        "ElmTestBDDStyle"
+    ],
+    "dependencies": {
+        "deadfoxygrandpa/elm-test": "3.0.1 <= v < 4.0.0",
+        "elm-lang/core": "3.0.0 <= v < 4.0.0",
+        "laszlopandy/elm-console": "1.0.3 <= v < 2.0.0"
+    },
+    "elm-version": "0.16.0 <= v < 0.17.0"
+}
