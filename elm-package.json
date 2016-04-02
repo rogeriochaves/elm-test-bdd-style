@@ -1,5 +1,5 @@
 {
-    "version": "2.0.0",
+    "version": "3.0.0",
     "summary": "BDD-style matchers for elm-test",
     "repository": "https://github.com/rogeriochaves/elm-test-bdd-style.git",
     "license": "MIT",
