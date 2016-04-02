@@ -16,7 +16,7 @@ module ElmTestBDDStyle
 
 -}
 
-import ElmTest exposing (Test, Assertion, suite, test, assert)
+import ElmTest exposing (Test, Assertion, suite, test, assertEqual, assertNotEqual)
 import Check.Test as CheckTest
 import Check.Investigator exposing (Investigator)
 import Random exposing (initialSeed)
@@ -34,16 +34,16 @@ it = test
 
 {-| Expectation to actually run the test, it receives
 two values and try to match then with a matcher -}
-expect : a -> (a -> b -> Bool) -> b -> Assertion
-expect actual matchs expected = assert <| actual `matchs` expected
+expect : a -> (a -> b -> Assertion) -> b -> Assertion
+expect actual matchs expected = actual `matchs` expected
 
 {-| Expect something to be equals something else -}
-toBe : a -> a -> Bool
-toBe = (==)
+toBe : a -> a -> Assertion
+toBe = assertEqual
 
 {-| Expect something not to be equals something else -}
-notToBe : a -> a -> Bool
-notToBe = (<<) not << toBe
+notToBe : a -> a -> Assertion
+notToBe = assertNotEqual
 
 {-| Words just to make the tests more idiomatic -}
 type Conjunction = Word

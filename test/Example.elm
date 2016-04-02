@@ -2,9 +2,10 @@ module Example where
 
 import ElmTestBDDStyle exposing (..)
 import Check.Investigator exposing (..)
+import ElmTest exposing (Assertion, assert)
 
-toBeGreaterThan : comparable -> comparable -> Bool
-toBeGreaterThan = (>)
+toBeGreaterThan : comparable -> comparable -> Assertion
+toBeGreaterThan a b = assert (a > b)
 
 tests : Test
 tests =
