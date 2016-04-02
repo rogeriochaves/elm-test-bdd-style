@@ -2,10 +2,9 @@ module Example where
 
 import ElmTestBDDStyle exposing (..)
 import Check.Investigator exposing (..)
-import ElmTest exposing (Assertion, assert)
 
 toBeGreaterThan : comparable -> comparable -> Assertion
-toBeGreaterThan a b = assert (a > b)
+toBeGreaterThan a b = (a > b) |> toBeTruthy
 
 tests : Test
 tests =
@@ -23,6 +22,9 @@ tests =
           expect expression toBe 4
 
     , it "compares two numbers" <|
+        expect (10 > 5) toBeTruthy
+
+    , it "compares two numbers with a custom matcher" <|
         expect 10 toBeGreaterThan 5
 
     , itAlways "ends up with the same list when reversing twice" <|
