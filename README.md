@@ -39,6 +39,9 @@ tests =
     , it "does not miscalculate things" <|
         expect (2 + 2) notToBe 5
 
+    , it "compares two numbers" <|
+        expect (10 > 5) toBeTruthy
+
     , it "exemplifies more complex test cases" <|
         let
           expression = 2 + 2
@@ -47,11 +50,11 @@ tests =
     ]
 ```
 
-Right now, elm-test-bdd-style comes only with `toBe` and `notToBe`, but it is very easy to create your own matchers:
+Right now, elm-test-bdd-style comes only with `toBe`, `notToBe` and `toBeTruthy`, but it is very easy to create your own matchers:
 
 ```elm
-toBeGreaterThan : comparable -> comparable -> Bool
-toBeGreaterThan = (>)
+toBeGreaterThan : comparable -> comparable -> Assertion
+toBeGreaterThan a b = (a > b) |> toBeTruthy
 
 tests : Test
 tests =
