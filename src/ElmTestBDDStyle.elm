@@ -1,28 +1,31 @@
 module ElmTestBDDStyle
-  (Test, describe, it
-  , expect, toBe, notToBe
+  (Test, Assertion, describe, it
+  , expect, toBe, notToBe, toBeTruthy
   , itAlways, expectThat, isTheSameAs, forEvery) where
 
 {-| BDD style functions for ElmTest
 
 # Tests
-@docs Test, describe, it
+@docs Test, Assertion, describe, it
 
 # Matchers
-@docs expect, toBe, notToBe
+@docs expect, toBe, notToBe, toBeTruthy
 
 # Property-based testing
 @docs itAlways, expectThat, isTheSameAs, forEvery
 
 -}
 
-import ElmTest exposing (Test, Assertion, suite, test, assert)
+import ElmTest exposing (Test, suite, test, assert, assertEqual, assertNotEqual)
 import Check.Test as CheckTest
 import Check.Investigator exposing (Investigator)
 import Random exposing (initialSeed)
 
 {-| The basic unit of testability. -}
 type alias Test = ElmTest.Test
+
+{-| Assertion type, use that for building custom matchers -}
+type alias Assertion = ElmTest.Assertion
 
 {-| A group of related behaviours specs -}
 describe : String -> List Test -> Test
@@ -34,16 +37,20 @@ it = test
 
 {-| Expectation to actually run the test, it receives
 two values and try to match then with a matcher -}
-expect : a -> (a -> b -> Bool) -> b -> Assertion
-expect actual matchs expected = assert <| actual `matchs` expected
+expect : a -> (a -> b) -> b
+expect actual matchs = matchs actual
 
 {-| Expect something to be equals something else -}
-toBe : a -> a -> Bool
-toBe = (==)
+toBe : a -> a -> Assertion
+toBe = assertEqual
 
 {-| Expect something not to be equals something else -}
-notToBe : a -> a -> Bool
-notToBe = (<<) not << toBe
+notToBe : a -> a -> Assertion
+notToBe = assertNotEqual
+
+{-| Expect something to be true -}
+toBeTruthy : Bool -> Assertion
+toBeTruthy = assert
 
 {-| Words just to make the tests more idiomatic -}
 type Conjunction = Word
