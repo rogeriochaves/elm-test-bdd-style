@@ -8,7 +8,7 @@ BDD style matchers on top of elm-test and elm-check
 
 ## Getting started ##
 
-First, follow the getting started steps from the [elm-test](https://github.com/deadfoxygrandpa/elm-test) package.
+First, follow the getting started steps from the [elm-test](https://github.com/elm-community/elm-test) package.
 
 Then, install elm-test-bdd-style:
 
@@ -68,13 +68,13 @@ tests =
 
 You can also lean on the power of elm-check in an idiom-concise way.
 
-First, check-out [elm-check](https://github.com/NoRedInk/elm-check) page for installing it on your project, you will need the Investigators.
+First, check-out [elm-check](https://github.com/elm-community/elm-check) page for installing it on your project, you will need the Investigators.
 
 Now just import `Check.Investigator` and you are good to go:
 
 ```elm
 import ElmTestBDDStyle exposing (..)
-import Check.Investigator exposing (..)
+import Check.Producer exposing (..)
 
 tests : Test
 tests =
@@ -91,6 +91,8 @@ tests =
 
 And you will get a hundred runs:
 
-![quick-check](https://cloud.githubusercontent.com/assets/792201/12377802/316d9b88-bd11-11e5-836f-b3b02ba99112.png)
+```
+ends up with the same list when reversing twice [100 checks]: passed.
+```
 
 You can easily mix those tests with the regular ones inside your `describe`.
