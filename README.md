@@ -68,9 +68,9 @@ tests =
 
 You can also lean on the power of elm-check in an idiom-concise way.
 
-First, check-out [elm-check](https://github.com/elm-community/elm-check) page for installing it on your project, you will need the Investigators.
+First, check-out [elm-check](https://github.com/elm-community/elm-check) page for installing it on your project, you will need the Producers.
 
-Now just import `Check.Investigator` and you are good to go:
+Now just import `Check.Producer` and you are good to go:
 
 ```elm
 import ElmTestBDDStyle exposing (..)
