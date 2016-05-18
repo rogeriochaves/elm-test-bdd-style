@@ -7,11 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/elm-test/bin/elm-test test/TestRunner.elm"
+    "test": "elm-make test/TestRunner.elm --output test.js && node test.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "elm-test": "^0.16.0"
+    "elm": "0.17.0"
   }
 }

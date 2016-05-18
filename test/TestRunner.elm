@@ -1,16 +1,9 @@
-module Main where
+module Main exposing (..)
 
-import Task
-import Graphics.Element exposing (Element)
-import Console exposing (..)
-import ElmTest exposing (Test, consoleRunner, elementRunner)
-
+import ElmTest exposing (..)
 import Example exposing (tests)
 
-main : Element
-main =
-    elementRunner tests
 
-port runner : Signal (Task.Task x ())
-port runner =
-    Console.run <| consoleRunner tests
+main : Program Never
+main =
+    runSuite tests
