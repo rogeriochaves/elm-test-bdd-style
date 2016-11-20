@@ -32,9 +32,9 @@ type Conjunction
 {-| Expectation to actually run the test, it receives
 two values and try to match then with a matcher
 -}
-expect : a -> Conjunction -> (a -> b) -> b
+expect : a -> Conjunction -> (b -> a -> Expectation) -> b -> Expectation
 expect actual _ matcher =
-    matcher actual
+    (flip matcher) actual
 
 
 {-| Just a word to make it more idiomatic

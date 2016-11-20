@@ -20,8 +20,8 @@ tests =
             in
                 expect expression to equal 4
         , it "compares two numbers" <|
-            expect (10 > 5) toBe (true "math should work")
-        , it "compares two numbers with a custom matcher" <|
+            expect (10 > 5) toBe true "math should work"
+        , it "compares two numbers" <|
             expect 10 toBe greaterThan 5
         , fuzz (list int) "ends up with the same list when reversing twice" <|
             \fuzzList ->
