@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "install": "elm package install -y",
     "test": "elm-test"
   },
   "author": "",
