@@ -1,0 +1,13 @@
+{
+  "name": "elm-test-bdd-style",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "elm-test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "elm-test": "^0.18.0"
+  }
+}

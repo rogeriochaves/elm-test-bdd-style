@@ -1,31 +1,3 @@
-elm-test-bdd-style [![Build Status][snap-svg]][snap-url]
-==================
-
-[snap-svg]: https://snap-ci.com/rogeriochaves/elm-test-bdd-style/branch/master/build_image.svg
-[snap-url]: https://snap-ci.com/rogeriochaves/elm-test-bdd-style/branch/master
-
-BDD style matchers on top of elm-test. It's a very simple syntax sugar.
-
-## Getting started ##
-
-First, follow the getting started steps from the [elm-test](https://github.com/elm-community/elm-test) package.
-
-Then, install elm-test-bdd-style:
-
-```
-elm package install rogeriochaves/elm-test-bdd-style
-```
-
-To use it, just import it on your test:
-
-```elm
-import ElmTestBDDStyle exposing (..)
-```
-
-## Usage example ##
-
-```elm
--- Example.elm
 module Example exposing (..)
 
 import Test exposing (..)
@@ -55,4 +27,3 @@ tests =
             \fuzzList ->
                 expect (List.reverse (List.reverse fuzzList)) to equal fuzzList
         ]
-```
