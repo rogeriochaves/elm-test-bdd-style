@@ -1,14 +1,24 @@
 {
   "name": "elm-test-bdd-style",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0-check-elm-package-json",
+  "description": "BDD-style matchers for elm-test",
   "scripts": {
-    "test": "elm-test"
+    "install": "elm package install -y && cd tests && elm package install -y",
+    "test": "elm test"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "elm": "^0.18.0",
-    "elm-test": "^0.18.3"
-  }
+    "elm-test": "^0.18.3-beta17"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogeriochaves/elm-test-bdd-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogeriochaves/elm-test-bdd-style/issues"
+  },
+  "homepage": "https://github.com/rogeriochaves/elm-test-bdd-style#readme"
 }

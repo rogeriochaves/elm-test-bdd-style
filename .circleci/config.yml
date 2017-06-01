@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/elm-test-bdd-style
+    docker:
+      - image: circleci/node:7
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "elm-package.json" }}-{{ checksum "tests/elm-package.json" }}
+      - run:
+          name: install-dependencies
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "elm-package.json" }}-{{ checksum "tests/elm-package.json" }}
+          paths:
+            - node_modules
+            - elm-stuff
+            - tests/elm-stuff
+      - run:
+          name: test
+          command: npm test
