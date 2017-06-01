@@ -1,8 +1,8 @@
-elm-test-bdd-style [![Build Status][snap-svg]][snap-url]
+elm-test-bdd-style [![Build Status][ci-svg]][ci-url]
 ==================
 
-[snap-svg]: https://snap-ci.com/rogeriochaves/elm-test-bdd-style/branch/master/build_image.svg
-[snap-url]: https://snap-ci.com/rogeriochaves/elm-test-bdd-style/branch/master
+[ci-svg]: https://circleci.com/gh/rogeriochaves/elm-test-bdd-style.svg?style=shield
+[ci-url]: https://circleci.com/gh/rogeriochaves/elm-test-bdd-style
 
 BDD style matchers on top of elm-test. It's a very simple syntax sugar.
 
