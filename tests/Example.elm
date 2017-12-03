@@ -1,14 +1,14 @@
 module Example exposing (..)
 
-import Test exposing (..)
+import ElmTestBDDStyle exposing (..)
 import Expect exposing (..)
 import Fuzz exposing (..)
-import ElmTestBDDStyle exposing (..)
+import Test exposing (..)
 
 
 tests : Test
 tests =
-    describe "Example Text"
+    describe "Example Test"
         [ it "does math correctly" <|
             expect (1 + 1) to equal 2
         , it "does not miscalculate things" <|
@@ -18,7 +18,7 @@ tests =
                 expression =
                     2 + 2
             in
-                expect expression to equal 4
+            expect expression to equal 4
         , it "compares two numbers (toBe true)" <|
             expect (10 > 5) toBe true "math should work"
         , it "compares two numbers (greaterThan)" <|
