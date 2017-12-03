@@ -56,3 +56,9 @@ tests =
                 expect (List.reverse (List.reverse fuzzList)) to equal fuzzList
         ]
 ```
+
+## Extending it ##
+
+You can use [ktonon/elm-test-exta](http://package.elm-lang.org/packages/ktonon/elm-test-extra/1.6.2/Expect-Extra) for extra matchers such as `match` and `contain`.
+
+You may also write your own matchers and other functions to make your tests as idiomatic as you want. For some examples, check out the `tests/BetterSpecs.elm` file on this project to see a reimplementation of [betterspecs.org](http://www.betterspecs.org/) in Elm.
