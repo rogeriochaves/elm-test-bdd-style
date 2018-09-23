@@ -1,19 +1,18 @@
-elm-test-bdd-style [![Build Status][ci-svg]][ci-url]
-==================
+# elm-test-bdd-style [![Build Status][ci-svg]][ci-url]
 
 [ci-svg]: https://circleci.com/gh/rogeriochaves/elm-test-bdd-style.svg?style=shield
 [ci-url]: https://circleci.com/gh/rogeriochaves/elm-test-bdd-style
 
 BDD style matchers on top of elm-test. It's a very simple syntax sugar.
 
-## Getting started ##
+## Getting started
 
-First, follow the getting started steps from the [elm-test](https://github.com/elm-community/elm-test) package.
+First, follow the getting started steps from the [elm-test](https://github.com/elm-explorations/test) package.
 
 Then, install elm-test-bdd-style:
 
 ```
-elm package install rogeriochaves/elm-test-bdd-style
+elm install rogeriochaves/elm-test-bdd-style
 ```
 
 To use it, just import it on your test:
@@ -22,7 +21,7 @@ To use it, just import it on your test:
 import ElmTestBDDStyle exposing (..)
 ```
 
-## Usage example ##
+## Usage example
 
 ```elm
 -- Example.elm
@@ -57,7 +56,7 @@ tests =
         ]
 ```
 
-## Extending it ##
+## Extending it
 
 You can use [ktonon/elm-test-exta](http://package.elm-lang.org/packages/ktonon/elm-test-extra/1.6.2/Expect-Extra) for extra matchers such as `match` and `contain`.
 
