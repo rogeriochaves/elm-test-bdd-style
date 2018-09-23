@@ -170,7 +170,7 @@ findType id =
 
 context : String -> a -> List (String -> a -> Test) -> Test
 context text subject fns =
-    describe text <| List.indexedMap (\index fn -> fn ("expectation #" ++ toString (index + 1)) subject) fns
+    describe text <| List.indexedMap (\index fn -> fn ("expectation #" ++ String.fromInt (index + 1)) subject) fns
 
 
 itIsExpected : Conjunction -> (a -> b -> Expectation) -> a -> String -> b -> Test
@@ -180,7 +180,7 @@ itIsExpected word matcher expected text subject =
 
 multipleIt : String -> List Expectation -> Test
 multipleIt text expectations =
-    describe text <| List.indexedMap (\index -> it <| ("expectation #" ++ toString (index + 1))) expectations
+    describe text <| List.indexedMap (\index -> it <| ("expectation #" ++ String.fromInt (index + 1))) expectations
 
 
 respondWith : number -> Response -> Expectation

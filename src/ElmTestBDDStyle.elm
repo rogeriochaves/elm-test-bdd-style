@@ -1,11 +1,4 @@
-module ElmTestBDDStyle
-    exposing
-        ( Conjunction(..)
-        , expect
-        , it
-        , to
-        , toBe
-        )
+module ElmTestBDDStyle exposing (it, expect, to, toBe, Conjunction(..))
 
 {-| BDD style functions for ElmTest
 
@@ -35,7 +28,7 @@ two values and try to match then with a matcher
 -}
 expect : a -> Conjunction -> (b -> a -> Expectation) -> b -> Expectation
 expect actual _ matcher =
-    flip matcher actual
+    \a -> matcher a actual
 
 
 {-| Just a word to make it more idiomatic
