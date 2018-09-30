@@ -12,7 +12,7 @@ First, follow the getting started steps from the [elm-test](https://github.com/e
 Then, install elm-test-bdd-style:
 
 ```
-elm install rogeriochaves/elm-test-bdd-style
+elm-test install rogeriochaves/elm-test-bdd-style
 ```
 
 To use it, just import it on your test:
