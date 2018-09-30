@@ -3,7 +3,7 @@
     "name": "rogeriochaves/elm-test-bdd-style",
     "summary": "BDD-style matchers for elm-test",
     "license": "MIT",
-    "version": "6.1.1",
+    "version": "6.1.2",
     "exposed-modules": [
         "ElmTestBDDStyle"
     ],
